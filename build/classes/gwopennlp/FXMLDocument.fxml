@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.chart.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="378.0" prefWidth="626.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gwopennlp.FXMLDocumentController">
+    <children>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <SplitPane dividerPositions="0.38" prefHeight="383.0" prefWidth="632.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="261.0" prefWidth="334.0" style="-fx-background-color: #1C2833;">
+               <children>
+                    <Button fx:id="button" layoutX="166.0" layoutY="120.0" onAction="#handleButtonAction" text="Validate" />
+                  <TextField fx:id="txtFrase" layoutX="11.0" layoutY="89.0" prefHeight="25.0" prefWidth="214.0" />
+                  <Button fx:id="btnFileLoad" layoutX="165.0" layoutY="178.0" mnemonicParsing="false" onAction="#btnFileLoadClick" text="File load" />
+                  <Label layoutX="11.0" layoutY="64.0" text="Write a sentence" textFill="#d0afaf">
+                     <font>
+                        <Font name="Comic Sans MS" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="16.0" layoutY="161.0" text="Call .csv file" textFill="#d0afaf">
+                     <font>
+                        <Font name="System Italic" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="53.0" prefWidth="235.0" style="-fx-background-color: #2874A6;" text="Voice type recognition" textFill="WHITE" AnchorPane.leftAnchor="0.0">
+                     <font>
+                        <Font name="Comic Sans MS Italic" size="17.0" />
+                     </font>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+                  <ProgressIndicator fx:id="barProgreso" layoutX="65.0" layoutY="238.0" opacity="0.84" prefHeight="73.0" prefWidth="105.0" visible="false" />
+                  <Label fx:id="lbnBarProgreso" layoutX="50.0" layoutY="324.0" text="One moment, please" textFill="WHITE" visible="false">
+                     <font>
+                        <Font name="Comic Sans MS Bold Italic" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="280.0" prefWidth="303.0">
+               <children>
+                  <PieChart fx:id="pieChart" layoutX="29.0" layoutY="14.0" prefHeight="286.0" prefWidth="330.0" title="Types of voice" />
+                  <Button layoutX="14.0" layoutY="312.0" mnemonicParsing="false" text="See more" />
+                  <Pane layoutX="85.0" layoutY="300.0" prefHeight="73.0" prefWidth="291.0" visible="false">
+                     <children>
+                        <Label layoutX="14.0" layoutY="14.0" text="# voz activa" />
+                        <Label layoutX="14.0" layoutY="37.0" text="# voz pasiva" />
+                        <Label layoutX="92.0" layoutY="14.0" text="Label" />
+                        <Label layoutX="92.0" layoutY="37.0" text="Label" />
+                        <Label layoutX="146.0" layoutY="14.0" text="# No identificados:" />
+                        <Label layoutX="249.0" layoutY="14.0" text="Label" />
+                        <Label layoutX="146.0" layoutY="37.0" text="Tiempo: " />
+                        <Label layoutX="204.0" layoutY="37.0" text="Label" />
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+    </children>
+</AnchorPane>
