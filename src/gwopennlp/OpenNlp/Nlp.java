@@ -39,7 +39,7 @@ public class Nlp  {
          * tokenizar la frase de entrada.
          * Tokenizar significa separar la frase por cada palabra para el pocesamiento de la misma.
          * */
-        tokenModelIn = new FileInputStream("C:\\Users\\Leonardo-PC\\Documents\\Repositorio\\RepositorioGestion\\claseGestion\\GwOpenNlp\\src\\en-token.bin");
+        tokenModelIn = new FileInputStream("C:\\Users\\DidierPC\\Documents\\NetBeansProjects\\GwOpenNlp\\src\\en-token.bin");
         TokenizerModel tokenModel = new TokenizerModel(tokenModelIn);
         Tokenizer tokenizer = new TokenizerME(tokenModel);
         String tokens[] = tokenizer.tokenize(rx);
@@ -50,7 +50,7 @@ public class Nlp  {
         
         // Parts-Of-Speech Tagging
         // Lee el modelo de las partes de la frase.
-        posModelIn = new FileInputStream("C:\\Users\\Leonardo-PC\\Documents\\Repositorio\\RepositorioGestion\\claseGestion\\GwOpenNlp\\src\\en-pos-maxent.bin");
+        posModelIn = new FileInputStream("C:\\Users\\DidierPC\\Documents\\NetBeansProjects\\GwOpenNlp\\src\\en-pos-maxent.bin");
         // loading the parts-of-speech model from stream
         POSModel posModel = new POSModel(posModelIn);
         // initializing the parts-of-speech tagger with model
@@ -113,7 +113,7 @@ public class Nlp  {
      * @throws IOException
      */
     public List<String> leerCsv(){
-        String rutaCsv = "C:\\Users\\Leonardo-PC\\Documents\\Repositorio\\RepositorioGestion\\claseGestion\\GwOpenNlp\\src\\Libro1.csv";
+        String rutaCsv = "C:\\Users\\DidierPC\\Documents\\NetBeansProjects\\GwOpenNlp\\src\\Libro1.csv";
         BufferedReader br = null;
         String line = "";
         //String cvsSplitBy = ",";
